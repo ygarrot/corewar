@@ -6,7 +6,7 @@
 #    By: jpriou <jpriou@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/02 08:23:52 by gmonnier          #+#    #+#              #
-#    Updated: 2018/03/09 18:05:20 by jpriou           ###   ########.fr        #
+#    Updated: 2018/04/11 12:47:40 by ygarrot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -163,7 +163,7 @@ $(OBJDIR)/%.o: $(SRCDIR)/%.c
 	@mkdir -p $(ALL_OBJ_DIR) || true
 	@printf "                                                          \r"
 	@printf "$(_CYAN)Compiling $@$(_END)\r"
-	@$(CC) -o $@ -c $(CFLAGS) $< $(INCS)
+	$(CC) -o $@ -c $(CFLAGS) $< $(INCS)
 
 clean:
 	@echo "$(_RED)Removed objects (.o) files.$(_END)"

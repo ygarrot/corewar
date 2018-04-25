@@ -6,7 +6,7 @@
 /*   By: ygarrot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/27 14:03:20 by ygarrot           #+#    #+#             */
-/*   Updated: 2018/03/05 13:28:02 by ygarrot          ###   ########.fr       */
+/*   Updated: 2018/04/20 16:38:25 by ygarrot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ void	display_current(t_vm *vm, int addr, int end)
 	dis_refresh(&vm->curs);
 	wrefresh(vm->curs.bas);
 	wait = MICRO / ((vm->curs.wait >= 0) ? vm->curs.wait : 0);
-	usleep(wait);
+//	usleep(wait);
 }
 
 void	dis_refresh(t_ncurses *n)
