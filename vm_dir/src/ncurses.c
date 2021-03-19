@@ -61,7 +61,7 @@ void	display_current(t_vm *vm, int addr, int end)
 	dis_refresh(&vm->curs);
 	wrefresh(vm->curs.bas);
 	wait = MICRO / ((vm->curs.wait >= 0) ? vm->curs.wait : 0);
-//	usleep(wait);
+	usleep(wait);
 }
 
 void	dis_refresh(t_ncurses *n)
